@@ -1,0 +1,186 @@
+#me {
+	height: 200px;
+	width: 200px;
+}
+
+.card {
+	margin: 20px;
+	border: 1px solid black;
+}
+
+.contact-icon {
+	width: 100px;
+	height: 100px;
+}
+
+.contact-title {
+	font-size: 24px;
+}
+
+.centered-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.centered {
+	display: flex;
+	justify-content: center;
+}
+
+.webkit-transition {
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+/* Test Anim */
+
+.test-slide {
+	animation-duration: 3s;
+
+	animation-name: testSlide;
+}
+
+@keyframes testSlide {
+	from {
+		margin-left: 0%;
+		width: 50%;
+	}
+	to {
+		margin-left: 100%;
+		width: 100%;
+	}
+}
+
+/* End Test Anim */
+
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 500px;
+	height: 50px;
+	border: 1px solid black;
+}
+
+.slide-background {
+	-webkit-animation: slideIn 1s forwards;
+	/* -moz-animation: slideIn 1s forwards; */
+	animation: slideIn 1s forwards;
+}
+
+/* Copied & modified from SO: https://stackoverflow.com/questions/34159490/slide-in-from-left-css-animation */
+
+.slide-custom {
+	width: 500px;
+	height: 50px;
+	background: cyan;
+	position: relative;
+	-webkit-animation: slideIn 2s forwards;
+	/* -moz-animation: slideIn 2s forwards; */
+	animation: slideIn 2s forwards;
+}
+@-webkit-keyframes slideIn {
+	0% {
+		/* transform: translateX(-100px); */
+		transform: skewX(-100px);
+	}
+	100% {
+		/* transform: translateX(0); */
+		transform: skewX(0);
+	}
+}
+@-moz-keyframes slideIn {
+	0% {
+		transform: skewX(-100px);
+	}
+	100% {
+		transform: skewX(0);
+	}
+}
+@keyframes slideIn {
+	0% {
+		transform: skewX(-100px);
+	}
+	100% {
+		transform: skewX(0);
+	}
+}
+
+/* End copying from SO */
+
+/* Another SO copy: https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load */
+
+.fade-in {
+	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 2s; /* Firefox < 16 */
+	-ms-animation: fadein 2s; /* Internet Explorer */
+	-o-animation: fadein 2s; /* Opera < 12.1 */
+	animation: fadein 2s;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* End SO Copy */
+
+/* Sakai Code */
+.slide {
+	background-color: bisque;
+	position: absolute;
+	top: 0;
+	height: 50px;
+	width: 500px;
+}
+
+.slideIn {
+	left: 0;
+	transition: 1s;
+}
+
+/* End Sakai Code */
