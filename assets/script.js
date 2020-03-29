@@ -1,45 +1,3 @@
-// Grab the elements on the page.
-// let button = document.querySelector("#toggleButton");
-// let slide = document.querySelector(".slide");
-
-// // Add event listeners.
-// button.addEventListener(
-// 	"click",
-// 	() => {
-// 		slide.setAttribute("class", "slide slideIn");
-// 	},
-// 	false
-// );
-
-// slide.addEventListener(
-// 	"click",
-// 	() => {
-// 		slide.setAttribute("class", "slide slideOut");
-// 	},
-// 	false
-// );
-
-// let button2 = document.querySelector("#anotherToggle");
-// let slide2 = document.querySelector(".test-div");
-
-// button2.addEventListener(
-// 	"click",
-// 	() => {
-// 		slide2.setAttribute("class", ".test-div s-in");
-// 	},
-// 	false
-// );
-
-// slide2.addEventListener(
-// 	"click",
-// 	() => {
-// 		slide2.setAttribute("class", "test-div s-out");
-// 	},
-// 	false
-// );
-
-// ~*~*~*~*~*~**~*~*~
-
 let blackStuff = document.getElementById("blackness");
 
 window.addEventListener(
@@ -52,3 +10,8 @@ window.addEventListener(
 );
 
 // *~*~*~*~*~*~*~*~
+
+// TODO: mk bg img resize to different devices (use media query?)
+// todo: mk bg img have overlay with opacity
+// todo: mk bg img greyscale
+// todo: mk bg have tv noise

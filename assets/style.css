@@ -1,6 +1,47 @@
+/* via https://www.youtube.com/watch?v=niEsB80l754 */
+#noise {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url("images/tv-noise2.jpg");
+	opacity: 0.2;
+	animation: tvNoise 0.5s steps(10) infinite;
+	z-index: -1;
+}
+
+@keyframes tvNoise {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 100% 100%;
+	}
+}
+/* end youtube section */
+
 #me {
-	height: 200px;
-	width: 200px;
+	height: 300px;
+	width: 300px;
+}
+
+#color-overlay {
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.5;
+	position: fixed;
+}
+
+.background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* border: 3px solid black; */
+	background-image: url("images/background.jpg");
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	filter: grayscale(100%);
+	z-index: -2;
 }
 
 .card {
@@ -28,7 +69,7 @@
 	justify-content: center;
 }
 
-.wrapper {
+.old-wrapper {
 	position: relative;
 	overflow: hidden;
 	width: 500px;
@@ -36,72 +77,89 @@
 	border: 1px solid black;
 }
 
-/* Unused Test Anim */
+/* @Richard's solution from SO, modified */
 
-.test-slide {
-	animation-duration: 3s;
-
-	animation-name: testSlide;
+#wrapper {
+	background: #555555;
+	position: relative;
+	top: 0%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-@keyframes testSlide {
+#wrapper * {
+	margin: 5px;
+}
+
+.animatable {
+	/* background-color: #20262b; */
+	background-color: yellow;
+	color: #20262b;
+	position: relative;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) 1s 1 reveal forwards;
+}
+
+.animatable::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #20262b;
+	padding: inherit;
+	animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) 1.75s 1 hideBlack
+		forwards;
+}
+
+.animatable-white {
+	/* background-color: #20262b; */
+	background-color: whitesmoke;
+	color: #20262b;
+	position: relative;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) 1s 1 reveal forwards;
+}
+
+.animatable-white::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #20262b;
+	padding: inherit;
+	animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) 1.75s 1 hideBlack
+		forwards;
+}
+
+@keyframes reveal {
 	from {
-		margin-left: 0%;
-		width: 50%;
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 	}
 	to {
-		margin-left: 100%;
-		width: 100%;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
 }
 
-/* End Test Anim */
-
-.slide-background {
-	-webkit-animation: slideIn 1s forwards;
-	/* -moz-animation: slideIn 1s forwards; */
-	animation: slideIn 1s forwards;
-}
-
-/* Copied & modified from SO: https://stackoverflow.com/questions/34159490/slide-in-from-left-css-animation */
-
-.slide-custom {
-	width: 500px;
-	height: 50px;
-	background: cyan;
-	position: relative;
-	-webkit-animation: slideIn 2s forwards;
-	/* -moz-animation: slideIn 2s forwards; */
-	animation: slideIn 2s forwards;
-}
-@-webkit-keyframes slideIn {
-	0% {
-		/* transform: translateX(-100px); */
-		transform: scaleX(0);
+@keyframes hideBlack {
+	from {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
-	100% {
-		/* transform: translateX(0); */
-		transform: scaleX(1);
-	}
-}
-@-moz-keyframes slideIn {
-	0% {
-		transform: scaleX(0);
-	}
-	100% {
-		transform: scaleX(1);
-	}
-}
-@keyframes slideIn {
-	0% {
-		transform: scaleX(0);
-	}
-	100% {
-		transform: scaleX(1);
+	to {
+		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 	}
 }
 
-/* End copying from SO */
+/* End "Richard's Solution" */
 
 /* Another SO copy: https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load */
 
@@ -164,57 +222,6 @@
 
 /* End SO Copy */
 
-/* Unused: Sakai Code */
-/* .slide {
-	background-color: bisque;
-	position: absolute;
-	top: 0;
-	height: 100vh;
-	width: 100vw;
-}
-
-.slideOut {
-	animation: slide 0.5s forwards;
-	animation-delay: 2s;
-	left: -100vw !important;
-	transition: 1s;
-	-webkit-animation: slide 0.5s forwards;
-	-webkit-animation-delay: 2s;
-}
-
-.slideIn {
-	left: 0;
-	transition: 1s;
-} */
-
-/* End Sakai Code */
-
-/* Unused: My Attempt */
-
-.test-div {
-	background-color: royalblue;
-	position: absolute;
-	top: 0;
-	height: 100px;
-	width: 200px;
-}
-
-.s-out {
-	animation: slide 0.5s forwards;
-	animation-delay: 2s;
-	left: -50vw !important;
-	transition: 1s;
-	-webkit-animation: slide 0.5s forwards;
-	-webkit-animation-delay: 2s;
-}
-
-.s-in {
-	left: 0;
-	transition: 1s;
-}
-
-/* --- */
-
 /* Code for the id=Blackness div */
 .black-box {
 	position: fixed;
@@ -250,6 +257,33 @@
 	transition: slide 0.5s forwards;
 }
 
+/* End "id=Blackness" css */
+
+/* Unused: Sakai Code */
+/* .slide {
+	background-color: bisque;
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+.slideOut {
+	animation: slide 0.5s forwards;
+	animation-delay: 2s;
+	left: -100vw !important;
+	transition: 1s;
+	-webkit-animation: slide 0.5s forwards;
+	-webkit-animation-delay: 2s;
+}
+
+.slideIn {
+	left: 0;
+	transition: 1s;
+} */
+
+/* End Sakai Code */
+
 /* An almost functional solution provided by @maneroto */
 /* https://stackoverflow.com/questions/60895478/how-to-build-a-css-animation-that-slides-in-like-the-divs-and-text-on-this-w */
 
@@ -281,3 +315,50 @@
 } */
 
 /* End test solution */
+
+/* Unused: My Attempt */
+
+.test-div {
+	background-color: royalblue;
+	position: absolute;
+	top: 0;
+	height: 100px;
+	width: 200px;
+}
+
+.s-out {
+	animation: slide 0.5s forwards;
+	animation-delay: 2s;
+	left: -50vw !important;
+	transition: 1s;
+	-webkit-animation: slide 0.5s forwards;
+	-webkit-animation-delay: 2s;
+}
+
+.s-in {
+	left: 0;
+	transition: 1s;
+}
+
+/* End: "My Attempt" */
+
+/* Unused Test Anim */
+
+.test-slide {
+	animation-duration: 3s;
+
+	animation-name: testSlide;
+}
+
+@keyframes testSlide {
+	from {
+		margin-left: 0%;
+		width: 50%;
+	}
+	to {
+		margin-left: 100%;
+		width: 100%;
+	}
+}
+
+/* End Test Anim */
