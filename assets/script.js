@@ -12,6 +12,4 @@ window.addEventListener(
 // *~*~*~*~*~*~*~*~
 
 // TODO: mk bg img resize to different devices (use media query?)
-// todo: mk bg img have overlay with opacity
-// todo: mk bg img greyscale
-// todo: mk bg have tv noise
+// todo: mk bg img darken as scroll gets lower
