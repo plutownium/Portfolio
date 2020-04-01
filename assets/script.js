@@ -13,3 +13,5 @@ window.addEventListener(
 
 // TODO: mk bg img resize to different devices (use media query?)
 // todo: mk bg img darken as scroll gets lower
+
+// FIXME: 5ish px white border around top and left side of page
