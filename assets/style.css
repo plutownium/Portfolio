@@ -8,7 +8,6 @@ p {
 	font-size: 18px;
 	color: #fff;
 	background-color: #555555;
-
 	padding: 5px;
 }
 
@@ -16,11 +15,19 @@ span {
 	padding: 10px;
 }
 
+input {
+	margin: 10px;
+}
+
+textarea {
+	height: 100px;
+	width: 300px;
+}
+
 #background {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	/* border: 3px solid black; */
 	background-image: url("images/background.jpg");
 	/* background-size: 100% 100%; */
 	background-size: cover;
@@ -29,12 +36,6 @@ span {
 	filter: grayscale(100%);
 	z-index: -2;
 }
-
-/* @media screen and (max-width: 600px) {
-	#background {
-		background: url("images/background.jpg") no-repeat 100% center;
-	}
-} */
 
 /* via https://www.youtube.com/watch?v=niEsB80l754 */
 #noise {
@@ -81,13 +82,35 @@ span {
 }
 
 #me {
+	margin: 0px 4px 4px 0px;
 	height: 300px;
 	width: 300px;
 }
 
+#me-container {
+	margin: 40px;
+}
+
+#follow-list {
+	white-space: nowrap;
+}
+
+#form-container {
+	margin: 50px;
+}
+
+#form-container div {
+	margin: 20px;
+	text-align: center;
+}
+
+#home {
+	min-height: 800px;
+}
+
 #home-container {
-	height: 500px;
-	border: 1px solid cyan;
+	padding: 40px;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -95,7 +118,15 @@ span {
 }
 
 #home-header {
-	margin: 100px;
+	margin: 200px 0px 100px 0px;
+}
+
+#identity {
+	padding: 30px;
+}
+
+#spacer {
+	height: 100px;
 }
 
 /* Buttons */
@@ -120,8 +151,21 @@ span {
 
 /* End Buttons */
 
+.blurb {
+	margin: 30px;
+}
+
+.bold {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px;
+	margin: 10px;
+	display: block;
+}
+
 .button-container {
 	/* border: 3px solid yellow; */
+	margin: 20px;
 	height: 50px;
 	display: flex;
 	align-items: center;
@@ -136,10 +180,20 @@ span {
 .contact-card {
 	padding: 20px;
 	margin: 20px;
+	width: 110px;
 	border: 2px solid white;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.contact-card a {
+	color: white;
+	font-size: 18px;
+}
+
+.contact-card span {
+	margin: 20px;
 }
 
 .contact-icon {
@@ -196,8 +250,33 @@ span {
 	width: fit-content;
 }
 
+.portfolio-image-container {
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid white;
+}
+
+.portfolio-text-container {
+	margin: 20px 0px 20px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.portfolio-text-container a {
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	margin: 10px;
+	padding: 10px;
+	border: 3px solid white;
+}
+
 .section-div {
-	min-height: 858px;
+	min-height: 850px;
 }
 
 .old-wrapper {
@@ -235,6 +314,7 @@ span {
 	position: relative;
 	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 	animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) 1s 1 reveal forwards;
+	animation-delay: 1s;
 }
 
 .animatable::after {
@@ -257,6 +337,7 @@ span {
 	position: relative;
 	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 	animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) 1s 1 reveal forwards;
+	animation-delay: 1s;
 }
 
 .animatable-white::after {
@@ -359,26 +440,34 @@ span {
 	position: fixed;
 	float: left;
 	top: 0;
+	bottom: 0;
 	width: 100%;
 	height: 100%;
-	bottom: 0;
 	background-color: #000;
 	z-index: 999999;
-	-webkit-animation: fullSlide 0.5s forwards;
-	-webkit-animation-delay: 2s;
-	animation: fullSlide 0.5s forwards;
-	animation-delay: 2s;
+	/* -webkit-animation: fullSlide 0.5s forwards;
+	-webkit-animation-delay: 2s; */
+	animation: fullSlide 0.5s reverse;
+	animation-delay: 1s;
 }
 
 @-webkit-keyframes fullSlide {
-	100% {
+	0% {
 		left: 0;
+	}
+	100% {
+		left: 100;
 	}
 }
 
 @keyframes fullSlide {
+	0% {
+		left: 100%;
+		/* width: 100%; */
+	}
 	100% {
-		left: 0;
+		left: 0%;
+		/* width: 0%; */
 	}
 }
 

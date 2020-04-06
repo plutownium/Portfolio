@@ -12,10 +12,10 @@
 		<div id="background"></div>
 		<div id="noise"></div>
 		<div id="color-overlay"></div>
-		<div id="blackness" class="black-box"></div>
+		<!-- <div id="blackness" class="black-box"></div> -->
 		<!-- First Section -->
 		<div class="section-div">
-			<div id="home" class="centered-col" style="border: 5px solid red">
+			<div id="home" class="centered-col">
 				<!-- Home Container -->
 				<div id="home-container">
 					<div id="home-header" class="animatable">
@@ -23,7 +23,7 @@
 							<span>MEET ROLAND MACKINTOSH.</span>
 						</h1>
 					</div>
-					<div>
+					<div id="identity">
 						<div class="animatable-white">
 							<h3>
 								<div>
@@ -35,7 +35,7 @@
 							</h3>
 						</div>
 					</div>
-					<div class="fade-in">
+					<div class="fade-in blurb">
 						<p>
 							Programming with an interest in business on the
 							side.
@@ -62,7 +62,7 @@
 				<div class="animatable">
 					<h1><span>ABOUT.</span></h1>
 				</div>
-				<div class="animatable">
+				<div id="me-container" class="animatable">
 					<img
 						id="me"
 						src="assets/images/me.jpg"
@@ -89,20 +89,36 @@
 				<!-- Social links -->
 
 				<div class="fade-in">
-					<ul>
-						<li>FOLLOW:</li>
-						<li>Instagram</li>
-						<li>GitHub</li>
-						<li>LinkedIn</li>
+					<ul id="follow-list">
+						<li class="animatable bold" style="font-size: 24px;">
+							FOLLOW:
+						</li>
+						<li>
+							<a
+								class="animatable-white bold"
+								href="https://www.instagram.com/rolypolyistaken/"
+								>Instagram</a
+							>
+						</li>
+						<li>
+							<a
+								class="animatable-white bold"
+								href="https://github.com/plutownium"
+								>GitHub</a
+							>
+						</li>
+						<li>
+							<a
+								class="animatable-white bold"
+								href="https://www.linkedin.com/in/roland-mackintosh-7a1654108/"
+								>LinkedIn</a
+							>
+						</li>
 					</ul>
 				</div>
 
-				<a
-					href="https://www.linkedin.com/in/roland-mackintosh-7a1654108/"
-					target="_blank"
-				></a>
-
 				<!-- End social links -->
+				<div id="spacer"></div>
 			</div>
 		</div>
 		<!-- End second section -->
@@ -167,8 +183,8 @@
 							<span>Back-end Technologies</span>
 						</h4>
 						<p class="fade-in">
-							Python, Flask, more MySQL, and creation of REST APIs
-							to serve data.
+							Python, Flask, more Node.js, more MySQL, and
+							creation of REST APIs to serve data.
 						</p>
 					</div>
 					<!-- End back end card -->
@@ -220,22 +236,29 @@
 				<div class="centered flex-container">
 					<!-- Portfolio item -->
 					<div class="card">
-						<span>GitHub: </span
-						><a
+						<div class="portfolio-text-container">
+							<span class="animatable-white"
+								>GitHub Image Link:
+							</span>
+						</div>
+						<a
 							href="https://github.com/plutownium/indeed-scraper"
 							title="Indeed Scraper AKA Coder Job Market"
 						>
-							<div>
+							<div class="portfolio-image-container">
 								<img
 									src="assets/images/coderjobmarket.png"
 									alt="Indeed Scraper AKA Coder Job Market"
 									style="height: 300px; width: 300px;"
-								/></div
-						></a>
-						<span>Live Site: </span>
-						<a href="http://www.coderjobmarket.com/"
-							>Coder Job Market</a
-						>
+								/>
+							</div>
+						</a>
+						<div class="portfolio-text-container">
+							<span class="animatable-white">Live Site: </span>
+							<a href="http://www.coderjobmarket.com/"
+								>Coder Job Market</a
+							>
+						</div>
 						<p>
 							Tools used: Python (Flask), MySQL, React, JavaScript
 						</p>
@@ -243,12 +266,16 @@
 					<!-- End portfolio item -->
 					<!-- Portfolio item -->
 					<div class="card">
-						<span>GitHub: </span
-						><a
+						<div class="portfolio-text-container">
+							<span class="animatable-white"
+								>GitHub Image Link:
+							</span>
+						</div>
+						<a
 							href="https://github.com/plutownium/Reddit-Wallpapers-App"
 							title="Reddit Wallpapers App"
 						>
-							<div>
+							<div class="portfolio-image-container">
 								<img
 									src="assets/images/rolands_awesome_wallpapers.png"
 									alt="Reddit Wallpapers App"
@@ -256,22 +283,28 @@
 								/>
 							</div>
 						</a>
-						<span>Live Site: </span>
-						<a
-							href="https://plutownium.github.io/Reddit-Wallpapers-App/"
-							>Roland's Awesome Wallpapers</a
-						>
+						<div class="portfolio-text-container">
+							<span class="animatable-white">Live Site: </span>
+							<a
+								href="https://plutownium.github.io/Reddit-Wallpapers-App/"
+								>Roland's Awesome Wallpapers</a
+							>
+						</div>
 						<p>Tools used: HTML/CSS, JavaScript, Reddit's API</p>
 					</div>
 					<!-- End portfolio item -->
 					<!-- Portfolio item -->
 					<div class="card">
-						<span>GitHub: </span
-						><a
+						<div class="portfolio-text-container">
+							<span class="animatable-white"
+								>GitHub Image Link:
+							</span>
+						</div>
+						<a
 							href="https://github.com/plutownium/Sales-Funnel-Builder-01"
 							title="Sales Funnel Builder"
 						>
-							<div>
+							<div class="portfolio-image-container">
 								<img
 									src="assets/images/sales_funnel_builder.png"
 									alt="Sales Funnel Builder"
@@ -279,29 +312,37 @@
 								/>
 							</div>
 						</a>
-						<span>Live Site: </span>
-						<a href="https://salespages.netlify.com/"
-							>Sales Funnel Builder</a
-						>
+						<div class="portfolio-text-container">
+							<span class="animatable-white">Live Site: </span>
+							<a href="https://salespages.netlify.com/"
+								>Sales Funnel Builder</a
+							>
+						</div>
 						<p>Tools used: React, React-Redux, React Router</p>
 					</div>
 					<!-- End portfolio item -->
 					<!-- Portfolio item -->
 					<div class="card">
-						<span>GitHub: </span
-						><a
+						<div class="portfolio-text-container">
+							<span class="animatable-white"
+								>GitHub Image Link:
+							</span>
+						</div>
+						<a
 							href="https://github.com/plutownium/Breweries-Map"
 							title="Breweries Map"
 						>
-							<div>
+							<div class="portfolio-image-container">
 								<img
 									src="assets/images/breweries.png"
 									alt="Breweries Map"
 								/>
 							</div>
 						</a>
-						<span>Live Site: </span>
-						<a href="">Breweries Map</a>
+						<div class="portfolio-text-container">
+							<span class="animatable-white">Live Site: </span>
+							<a href="breweries.html">Breweries Map</a>
+						</div>
 						<p>
 							Tools used: JavaScript, the Open Breweries API, the
 							OpenMaps API
@@ -329,7 +370,9 @@
 							class="contact-icon"
 							src="assets/images/instagram.png"
 						/>
-						<span class="contact-title">Instagram</span>
+						<span class="contact-title animatable-white"
+							>Instagram</span
+						>
 						<a href="https://www.instagram.com/rolypolyistaken/"
 							>@rolypolyistaken</a
 						>
@@ -341,7 +384,9 @@
 							class="contact-icon"
 							src="assets/images/github.png"
 						/>
-						<span class="contact-title">GitHub</span>
+						<span class="contact-title animatable-white"
+							>GitHub</span
+						>
 						<a href="https://github.com/plutownium">@plutownium</a>
 					</div>
 					<!-- End GitHub card -->
@@ -351,7 +396,9 @@
 							class="contact-icon"
 							src="assets/images/linkedin.png"
 						/>
-						<span class="contact-title">LinkedIn</span>
+						<span class="contact-title animatable-white"
+							>LinkedIn</span
+						>
 						<a
 							href="https://www.linkedin.com/in/roland-mackintosh-7a1654108/"
 							>Roland Mackintosh</a
@@ -361,7 +408,7 @@
 				</div>
 				<!-- End contacts row -->
 				<!-- Contact form -->
-				<div class="centered">
+				<div id="form-container" class="centered">
 					<form>
 						<div>
 							<input
@@ -369,8 +416,6 @@
 								name="name"
 								placeholder="Your Name"
 							/>
-						</div>
-						<div>
 							<input
 								type="text"
 								name="email"
@@ -380,8 +425,11 @@
 						<div>
 							<textarea
 								name="message"
-								placeholder="Your Message"
+								placeholder="Send Me An Email Instead (Form Not Hooked Up)"
 							></textarea>
+						</div>
+						<div>
+							<button class="white-button">SEND MESSAGE</button>
 						</div>
 					</form>
 				</div>
