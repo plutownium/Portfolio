@@ -73,6 +73,7 @@ textarea {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
+	align-items: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -118,7 +119,7 @@ textarea {
 }
 
 #home-header {
-	margin: 200px 0px 100px 0px;
+	margin: 20px 20px 20px 20px;
 }
 
 #identity {
@@ -168,6 +169,8 @@ textarea {
 	margin: 20px;
 	height: 50px;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -232,8 +235,7 @@ textarea {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	/* text-align: center; */
-	/* max-width: 90%; */
+	align-items: center;
 }
 
 .header-center {
@@ -241,9 +243,10 @@ textarea {
 }
 
 .header-width {
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .headline-container {
@@ -435,151 +438,22 @@ textarea {
 
 /* End SO Copy */
 
-/* Code for the id=Blackness div */
-.black-box {
-	position: fixed;
-	float: left;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #000;
-	z-index: 999999;
-	/* -webkit-animation: fullSlide 0.5s forwards;
-	-webkit-animation-delay: 2s; */
-	animation: fullSlide 0.5s reverse;
-	animation-delay: 1s;
+/* MOBILE RESPONSIVE CHANGES BELOW */
+
+#home-header h1 {
+	padding: 10px;
 }
 
-@-webkit-keyframes fullSlide {
-	0% {
-		left: 0;
+.sml-screen-padding span {
+	text-align: center;
+}
+
+@media only screen and (max-width: 320px) {
+	.button-container {
+		margin: 20px 20px 100px 20px;
 	}
-	100% {
-		left: 100;
+
+	.button-container a {
+		margin: 20px;
 	}
 }
-
-@keyframes fullSlide {
-	0% {
-		left: 100%;
-		/* width: 100%; */
-	}
-	100% {
-		left: 0%;
-		/* width: 0%; */
-	}
-}
-
-.black-box-out {
-	margin-left: 100%;
-	animation: slide 0.5s forwards;
-	-webkit-transition: slide 0.5s forwards;
-	transition: slide 0.5s forwards;
-}
-
-/* End "id=Blackness" css */
-
-/* Unused: Sakai Code */
-/* .slide {
-	background-color: bisque;
-	position: absolute;
-	top: 0;
-	height: 100vh;
-	width: 100vw;
-}
-
-.slideOut {
-	animation: slide 0.5s forwards;
-	animation-delay: 2s;
-	left: -100vw !important;
-	transition: 1s;
-	-webkit-animation: slide 0.5s forwards;
-	-webkit-animation-delay: 2s;
-}
-
-.slideIn {
-	left: 0;
-	transition: 1s;
-} */
-
-/* End Sakai Code */
-
-/* An almost functional solution provided by @maneroto */
-/* https://stackoverflow.com/questions/60895478/how-to-build-a-css-animation-that-slides-in-like-the-divs-and-text-on-this-w */
-
-/* .entrance-animation {
-	position: relative;
-	color: blueviolet;
-	font-size: 24px;
-	width: 0;
-	overflow: hidden;
-	transition: width 0.5s ease;
-}
-.entrance-animation::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	background-color: black;
-	z-index: 10;
-	transition: width 0.5s ease;
-	transition-delay: 0.5s;
-}
-.entrance-animation.active {
-	width: 100%;
-}
-.entrance-animation.active::before {
-	width: 0%;
-} */
-
-/* End test solution */
-
-/* Unused: My Attempt */
-
-.test-div {
-	background-color: royalblue;
-	position: absolute;
-	top: 0;
-	height: 100px;
-	width: 200px;
-}
-
-.s-out {
-	animation: slide 0.5s forwards;
-	animation-delay: 2s;
-	left: -50vw !important;
-	transition: 1s;
-	-webkit-animation: slide 0.5s forwards;
-	-webkit-animation-delay: 2s;
-}
-
-.s-in {
-	left: 0;
-	transition: 1s;
-}
-
-/* End: "My Attempt" */
-
-/* Unused Test Anim */
-
-.test-slide {
-	animation-duration: 3s;
-
-	animation-name: testSlide;
-}
-
-@keyframes testSlide {
-	from {
-		margin-left: 0%;
-		width: 50%;
-	}
-	to {
-		margin-left: 100%;
-		width: 100%;
-	}
-}
-
-/* End Test Anim */
