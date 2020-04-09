@@ -295,38 +295,12 @@ textarea {
 }
 
 .section-div {
-	min-height: 900px;
+	min-height: 1000px;
 	width: 100%;
 	margin: 0 auto;
 }
 
-.old-wrapper {
-	position: relative;
-	overflow: hidden;
-	width: 500px;
-	height: 50px;
-	border: 1px solid black;
-}
-
 /* @Richard's solution from SO, modified */
-
-#wrapper {
-	background: #555555;
-	position: relative;
-	top: 0%;
-	left: 25%;
-	width: 50%;
-	height: 50%;
-	color: white;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-#wrapper * {
-	margin: 5px;
-}
 
 .animatable {
 	/* background-color: #20262b; */
@@ -374,6 +348,8 @@ textarea {
 		forwards;
 }
 
+/* REVEAL ANIMATION */
+
 @keyframes reveal {
 	from {
 		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
@@ -383,7 +359,89 @@ textarea {
 	}
 }
 
+/* Firefox < 16 */
+@-moz-keyframes reveal {
+	from {
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	}
+	to {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes reveal {
+	from {
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	}
+	to {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+
+/* Internet Explorer */
+@-ms-keyframes reveal {
+	from {
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	}
+	to {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes reveal {
+	from {
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	}
+	to {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+
+/* HIDE BLACK ANIMATION */
+
 @keyframes hideBlack {
+	from {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+	to {
+		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+	}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes hideBlack {
+	from {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+	to {
+		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+	}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes hideBlack {
+	from {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+	to {
+		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+	}
+}
+
+/* Internet Explorer */
+@-ms-keyframes hideBlack {
+	from {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+	to {
+		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+	}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes hideBlack {
 	from {
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
@@ -475,6 +533,10 @@ textarea {
 @media only screen and (max-width: 380px) {
 	.blurb {
 		margin: 20px 40px 20px 40px;
+	}
+
+	.blurb p {
+		margin: 20px;
 	}
 
 	.button-container {
