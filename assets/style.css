@@ -60,6 +60,46 @@ textarea {
 		background-position: 100% 100%;
 	}
 }
+
+/* Firefox < 16 */
+@-moz-keyframes tvNoise {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 100% 100%;
+	}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes tvNoise {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 100% 100%;
+	}
+}
+
+/* Internet Explorer */
+@-ms-keyframes tvNoise {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 100% 100%;
+	}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes tvNoise {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 100% 100%;
+	}
+}
 /* end youtube section */
 
 #color-overlay {
