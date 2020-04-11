@@ -340,157 +340,21 @@ textarea {
 	margin: 0 auto;
 }
 
-/* @Richard's solution from SO, modified */
+/*// YELLOW BACKGROUNDS //*/
 
-.animatable {
-	/* background-color: #20262b; */
+.yellow {
 	background-color: yellow;
 	color: #20262b;
 	position: relative;
-	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) 1s 1 reveal forwards;
-	animation-delay: 1s;
 }
 
-.animatable::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #20262b;
-	padding: inherit;
-	animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) 1.75s 1 hideBlack
-		forwards;
-}
+/*// WHITE BACKGROUNDS //*/
 
-.animatable-white {
-	/* background-color: #20262b; */
+.white {
 	background-color: whitesmoke;
 	color: #20262b;
 	position: relative;
-	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) 1s 1 reveal forwards;
-	animation-delay: 1s;
 }
-
-.animatable-white::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #20262b;
-	padding: inherit;
-	animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) 1.75s 1 hideBlack
-		forwards;
-}
-
-/* REVEAL ANIMATION */
-
-@keyframes reveal {
-	from {
-		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	}
-	to {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-}
-
-/* Firefox < 16 */
-@-moz-keyframes reveal {
-	from {
-		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	}
-	to {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes reveal {
-	from {
-		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	}
-	to {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-}
-
-/* Internet Explorer */
-@-ms-keyframes reveal {
-	from {
-		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	}
-	to {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-}
-
-/* Opera < 12.1 */
-@-o-keyframes reveal {
-	from {
-		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	}
-	to {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-}
-
-/* HIDE BLACK ANIMATION */
-
-@keyframes hideBlack {
-	from {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-	to {
-		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-	}
-}
-
-/* Firefox < 16 */
-@-moz-keyframes hideBlack {
-	from {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-	to {
-		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-	}
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes hideBlack {
-	from {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-	to {
-		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-	}
-}
-
-/* Internet Explorer */
-@-ms-keyframes hideBlack {
-	from {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-	to {
-		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-	}
-}
-
-/* Opera < 12.1 */
-@-o-keyframes hideBlack {
-	from {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	}
-	to {
-		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-	}
-}
-
-/* End "Richard's Solution" */
 
 /* Another SO copy: https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load */
 
