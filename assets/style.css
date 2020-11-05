@@ -140,6 +140,8 @@ textarea {
 
 #follow-list {
 	white-space: nowrap;
+	list-style: none;
+    padding-left: 0;
 }
 
 #form-container {
@@ -351,6 +353,7 @@ textarea {
 	min-height: 1000px;
 	width: 100%;
 	margin: 0 auto;
+	padding-top: 30px;
 	/* border: 2px solid green; */
 }
 
@@ -416,6 +419,9 @@ textarea {
 }
 
 /* november 2020 update below */
+/* november 2020 update below */
+/* november 2020 update below */
+
 @media only screen and (min-width: 470px) and (max-width: 550px) {
 	#home-container {
 		margin-top: 40px;
@@ -451,6 +457,125 @@ textarea {
 	}
 }
 
-@media only screen and (max-width: 469px) {
+@media only screen and (min-width: 380px) and (max-width: 469px) {
 
+	#home-container {
+		margin: 0;
+		padding: 0;
+	}
+
+	#home-container .fade-in {
+		margin: 20px 0;
+	}
+
+	#home-header {
+		width: 330px;
+		margin: 30px 10px 0 10px;
+		text-align: center;
+	}
+
+	#identity {
+		padding: 10px;
+	}
+
+	#me-container {
+		margin: 30px 0 0 0;
+	}
+
+	#scroll-indicator {
+		width: 100%;
+		margin: 20px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.blurb {
+		width: 320px;
+		margin: 8px 0 !important;
+	}
+}
+
+@media only screen and (max-width: 379px) {
+	#home-container {
+		margin: 0;
+		padding: 0;
+	}
+
+	#home-container .fade-in {
+		margin: 20px 0;
+	}
+
+	#home-header {
+		width: 250px;
+		margin: 10px 10px 0 10px;
+		text-align: center;
+	}
+
+	#home-header h1 {
+		font-size: 26px;
+	}
+
+	#identity {
+		padding: 10px;
+	}
+
+	#scroll-indicator {
+		width: 100%;
+		margin: 20px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.blurb {
+		width: 280px;
+		margin: 8px 0 !important;
+	}
+
+	.header-center {
+		width: 260px;
+	}
+
+	/* About Section */
+	#me {
+		width: 200px;
+		height: 200px;
+	}
+
+	#me-container {
+		margin: 30px 0;
+	}
+
+	/* What I Do + Technologies */
+	.small-img {
+		width: 230px !important;
+		height: 143px !important;
+	}
+
+	/* Portfolio */
+	#cjm {
+		width: 230px !important;
+		height: 230px !important;
+	}
+
+	#sfb {
+		width: 195px !important;
+		height: 238px !important;
+	}
+
+	#breweries {
+		width: 230px !important;
+		height: 230px !important;
+	}
+
+	#ASCII {
+		width: 230px !important;
+		height: 230px !important;
+	}
+
+	/* Contact */
+	#text-area-thing {
+		width: 240px;
+	}
 }
