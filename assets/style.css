@@ -179,7 +179,7 @@ textarea {
 }
 
 #section-container {
-	border: 3px solid red;
+	/* border: 3px solid red; */
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -309,7 +309,6 @@ textarea {
 }
 
 .header-width {
-	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -346,22 +345,13 @@ textarea {
 
 .section-div {
 	min-height: 1000px;
-	/* width: 100%;
-	margin: 0 auto; */
-	border: 2px solid green;
-	width: 100% !important;
-	margin: 0 !important;
-	padding: 0 !important;
+	width: 100%;
+	margin: 0 auto;
+	/* border: 2px solid green; */
 }
 
-.width-fix {
-	width: 100% !important;
-	margin: 0 !important;
-	padding: 0 !important;
-}
-
-.width-fix-min {
-	
+.disable {
+	display: none !important;
 }
 
 /*// YELLOW BACKGROUNDS //*/
