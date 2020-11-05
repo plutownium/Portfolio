@@ -172,6 +172,10 @@ textarea {
 	padding: 30px;
 }
 
+#nov2020-spacer {
+	margin: 0 0 80px 0;
+}
+
 #scroll-indicator {
 	margin: 120px;
 	height: 100px;
@@ -381,6 +385,9 @@ textarea {
 }
 
 @media only screen and (max-width: 800px) {
+	#identity {
+		padding: 10px 60px;
+	}
 	.blurb {
 		margin: 20px 80px 20px 80px;
 	}
@@ -406,4 +413,44 @@ textarea {
 	.mobile-col-centering {
 		text-align: center;
 	}
+}
+
+/* november 2020 update below */
+@media only screen and (min-width: 470px) and (max-width: 550px) {
+	#home-container {
+		margin-top: 40px;
+		padding: 0px;
+		display: inline-block;
+	}
+
+	#home-container .fade-in {
+		display: flex;
+		justify-content: center;
+	}
+
+	#home-header {
+		margin: 40px 40px 0 40px;
+		text-align: center;
+	}
+
+	#identity {
+		padding: 10px 60px;
+	}
+
+	#identity div h3 {
+		text-align: center;
+	}
+
+	#scroll-indicator {
+		width: 100%;
+		height: 200px;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media only screen and (max-width: 469px) {
+
 }
