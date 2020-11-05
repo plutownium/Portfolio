@@ -179,9 +179,12 @@ textarea {
 }
 
 #scroll-indicator {
-	margin: 120px;
-	height: 100px;
-	width: 200px;
+	width: 100%;
+	height: 200px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #section-container {
@@ -266,6 +269,7 @@ textarea {
 	padding: 20px;
 	margin: 20px;
 	width: 110px;
+	height: 155px;
 	border: 2px solid white;
 	display: flex;
 	flex-direction: column;
